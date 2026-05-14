@@ -1,10 +1,10 @@
-name: Frontend tests
+name: Fronted tests
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ["master"]
   pull_request:
-    branches: [ "master" ]
+    branches: ["master"]
 
 jobs:
   test:
@@ -17,10 +17,10 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
+        run:
           python -m venv .venv
           source .venv/bin/activate
           pip install pytest pytest-bdd pytest-playwright playwright
@@ -28,5 +28,5 @@ jobs:
 
       - name: Run tests (headless)
         run: |
-          source .venv/bin/activate
-          pytest -s
+           source .venv/bin/activate
+           pytest -s
