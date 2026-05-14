@@ -25,8 +25,8 @@ jobs:
           source .venv/bin/activate
           pip install pytest pytest-bdd pytest-playwright playwright
           playwright install
-
-      - name: Run tests (headless)
+          
+            - name: Run tests (headless)
         run: |
           source .venv/bin/activate
           pytest -s
