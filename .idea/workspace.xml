@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a670e7e-ffb1-4508-949c-6c999106a832" name="Changes" comment="" />
+    <list default="true" id="5a670e7e-ffb1-4508-949c-6c999106a832" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/features/bokdetaljer.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/favoriter.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/katalog.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/navigering.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/statistik.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/test_bokdetaljer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/test_favoriter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/test_katalog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/test_navigering.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/features/steps/test_staistik.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STORIES.md" beforeDir="false" afterPath="$PROJECT_DIR$/STORIES.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "larstan5202"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/larstan5202/examen_uppgift_lars",
+    "accountId": "f5763363-a763-4f4c-b415-e72d9cb08ca4"
+  }
+}]]></component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -28,7 +64,11 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "to.speed.mode.migration.done": "true"
   }
@@ -49,5 +89,16 @@
       <updated>1778679015357</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
