@@ -19,12 +19,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        shell: bash
+       - name: Install dependencies
         run: |
           python -m venv .venv
           source .venv/bin/activate
-          pip install pytest pytest-bdd pytest-playwright playwright
+          pip install --upgrade pip
+          pip install pytest pytest-bdd pytest-playwright
           playwright install
 
       - name: Run tests (headless)
