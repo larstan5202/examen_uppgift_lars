@@ -2,9 +2,9 @@ name: Frontend tests
 
 on:
   push:
-    branches: ["bemästra"]
+    branches: ["master"]
   pull_request:
-    branches: ["bemästra"]
+    branches: ["master"]
 
 jobs:
   test:
@@ -19,7 +19,7 @@ jobs:
         with:
           python-version: "3.11"
 
-       - name: Install dependencies
+      - name: Install dependencies
         run: |
           python -m venv .venv
           source .venv/bin/activate
