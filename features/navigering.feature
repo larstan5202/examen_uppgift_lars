@@ -1,13 +1,11 @@
-Feature: Navigera mellan vyer
-  Som en användare
-  Vill jag kunna navigera mellan katalog, favoriter och statistik
+Feature: Navigering mellan vyer
 
   Scenario: Användaren navigerar till favoritvyn
-    Given att användaren öppnar startsidan
+    Given att användaren är på startsidan
     When användaren klickar på "Favorites"
     Then visas favoritvyn
 
   Scenario: Användaren navigerar till statistikvyn
-    Given att nvändaren öppnar startsidan
+    Given att användaren är på startsidan
     When användaren klickar på "Statistics"
-    Then visas stastikvyn
+    Then visas statistikvyn

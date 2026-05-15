@@ -1,8 +1,5 @@
-Feature: Visa bokkatalog
-  Som en användare
-  Vill jag se en lista med böcker
-  Så att jag kan bläddra i katalogen
+Feature: Visa bokkatalogen
 
   Scenario: Användaren ser bokkatalogen när sidan öppnas
-    Given att användaren öppnar startsidan
+    Given att användaren är på startsidan
     Then visas bokkatalogen
