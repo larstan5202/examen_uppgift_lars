@@ -1,17 +1,17 @@
 import pytest
-from pytest_bdd import scenarios, given when
+from pytest_bdd import scenarios, given, when, then
 
 scenarios("../navigering.feature")
 
-@pytets.fixture
+@pytest.fixture
 def page(browser):
     page = browser.new_page()
     yield page
     page.close()
 
-@given
+@given("att användaren är på startsidan")
 def open_start(page):
-    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="networkidl")
+    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="networkidle")
     page.wait_for_selector('[data-testid="catalog"]')
 
 @when('användaren klickar på "Favorites"')
