@@ -5,7 +5,7 @@ scenarios("../navigering.feature")
 
 @given("att användaren är på startsidan")
 def open_start(page):
-    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="networkidle")
+    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="domcontentloaded")
 
 @when('användaren klickar på "Favorites"')
 def click_favorites(page):

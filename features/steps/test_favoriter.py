@@ -5,7 +5,7 @@ scenarios("../favoriter.feature")
 
 @given("att användaren är på startsidan")
 def open_start(page):
-    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="networkidle")
+    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="domcontentloaded")
 
 @when("användaren lägger till en bok i favoriter")
 def add_favorite(page):
