@@ -1,41 +1,27 @@
-import pytest
 from pytest_bdd import scenarios, given, when, then
+from playwright.sync_api import expect
 
 scenarios("../favoriter.feature")
 
-@pytest.fixture
-def page(browser):
-    page = browser.new_page()
-    yield page
-    page.close()
-
-@given("att användaren öppnar startsidan")
+@given("att användaren är på startsidan")
 def open_start(page):
     page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="networkidle")
-    page.wait_for_selector('[data-testid="catalo"]')
 
-@when("användaren lägger till första boken i favoriter")
-def add_first_favorite(pag):
-    page.click('(//button[@data-testid="favorite-button"])[1]')
+@when("användaren lägger till en bok i favoriter")
+def add_favorite(page):
+    page.locator("div.book-card").first.click()
+    page.locator('[data-testid="add-favorite"]').click()
 
-@then("ska boken visas i favoritlistan")
-def book_in_favorites(page):
-    page.click('[data-testid="favorites"]')
-    page.wait_for_selector('[data-testid="favorites-view"]')
-    page.wair_for_selector('[data-testid="book-item"]')
+@then("visas boken i favoritlistan")
+def favorite_list(page):
+    page.locator('[data-testid="favorites"]').click()
+    expect(page.locator("div.book-card")).to_be_visible()
 
-@given("att användaren har en favoritbok")
-def ensure_favorite(page):
-    page.goto("https://tap-ht25-testverktyg.github.io/exam/", wait_until="networkidle")
-    page.wait_for_selector('(//button[@data-testid="catalo"]')
-    page.click('(//button[@data-testid="favorite-button"])[1]')
-
-@when("användaren tar bort boken från favoriter")
+@when("användaren tar bort en bok från favoriter")
 def remove_favorite(page):
-    page.click('[data-testid="favorites"]')
-    page.wait_for_selector('[data-testid="favorites-view"]')
-    page.click('(//button[@data-testid="favorite-button"])[1]')
+    page.locator('[data-testid="favorites"]').click()
+    page.locator('[data-testid="remove-favorite"]').first.click()
 
-@then("ska boken inte längre visas i favoritlistan")
-def no_favorites(page):
-    assert page.query_selector('[data-testid="book-item"]') is None
+@then("är favoritlistan tom")
+def empty_favorites(page):
+    expect(page.locator("div.book-card")).to_have_count(0)
