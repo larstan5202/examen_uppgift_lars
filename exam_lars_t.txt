@@ -3,3 +3,12 @@ https://github.com/larstan5202/examen_uppgift_lars
 
 Jag har arbetat med G-kraven.
 Projektet är publikt
+
+På grund av tekniska problem i PyCharm gick det inte att skriva i projektets README.md-fil
+Filen blev skrivskyddad trots flera försök att låsa upp den, och problemet låg inte i projektet
+utan i utvecklingsmiljön.
+
+För att kunna genomföra inlämningen skapa jag därför en separat fil (INLAMNING.md).
+
+Inlämningsfil:
+INLAMNING.md
